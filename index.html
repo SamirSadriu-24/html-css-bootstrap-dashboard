@@ -1,288 +1,572 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-    <title>Libreria</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+		integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+		crossorigin="anonymous"></script>
+	<title>Libreria</title>
 </head>
+
 <body>
-    <header>
-        <!-- Navbaar componente BS-->
-        <nav class="navbar navbar-expand-lg bg-dark">
-            <div class="container-fluid">
-                    <nav class="navbar">
-                    <div class="container">
-                        <a class="navbar-brand" href="#">
-                        <img src="img/duck.png" alt="duck-png" width="50" height="50">
-                        </a>
-                    </div>
-                    </nav>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="#">Catalogo Libri</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="#">Anagrafica Utenti</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="#">Storico Prestiti</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="#">Help</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+	<header>
+		<!-- Navbaar componente BS-->
+		<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+			<div class="container-fluid">
+				<nav class="navbar">
+					<div class="container">
+						<a class="navbar-brand" href="#">
+							<img src="img/duck.png" alt="duck-png" width="50" height="50">
+						</a>
+					</div>
+				</nav>
+				<button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+					aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active secondary-link" aria-current="page" href="#">Catalogo Libri</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link secondary-link" href="#">Anagrafica Utenti</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link secondary-link" href="#">Storico Prestiti</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link secondary-link" href="#">Help</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
 
-    <main>
-        <div class="container mt-3 px-4">
-            <div class="row">
-                <div class="col-10">
-                    <p class="fs-4 fw-semibold">Catalogo Libri</p>
-                </div>
-                <div class="col">
-                    <button class="fs-6 bg-primary text-white rounded p-2">Aggiungi libro</button>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="container mt-3 px-5">
-            <div class="row">
-                <div class="col-5 fw-bold">
-                    <p>Titolo</p>
-                </div>
-                <div class="col text-center fw-bold">
-                    <p>Data Prestito</p>
-                </div>
-                <div class="col text-center fw-bold">
-                    <p>Stato</p>
-                </div>
-                <div class="col-3 text-center fw-bold">
-                    <p>Azioni</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="container mt-3 px-5 ">
-            <div class="row bg-light border border-secondary border-start-0 border-end-0 pt-2">
-                <div class="col-5 small me-5">
-                    <p>I pilastri della terra</p>
-                </div>
-                <div class="col-2 text-left fw-bold">
-                    <p>-</p>
-                </div>
-                <div class="col text-center ms-3">
-                    <p class="text-white small bg-success rounded w-75">Disponibile</p>
-                </div>
-                <div class="col-3 text-center fw-bold">
-                    <p>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-pencil"></i></button>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-trash-can"></i></button>
-                    </p>
-                </div>
-            </div>
-            <div class="row border border-secondary border-start-0 border-top-0 border-end-0 pt-2">
-                <div class="col-5 small me-5">
-                    <p>I promessi sposi</p>
-                </div>
-                <div class="col-2 text-left fw-bold">
-                    <p>-</p>
-                </div>
-                <div class="col text-center ms-3">
-                    <p class="text-white small bg-success rounded w-75">Disponibile</p>
-                </div>
-                <div class="col-3 text-center fw-bold">
-                    <p>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-pencil"></i></button>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-trash-can"></i></button>
-                    </p>
-                </div>
-            </div>
-            <div class="row bg-light border border-secondary border-start-0  border-top-0 border-end-0 pt-2">
-                <div class="col-5 small me-5">
-                    <p>Il signore degli anelli</p>
-                </div>
-                <div class="col-2 text-left">
-                    <p class="small">18/10/2023</p>
-                </div>
-                <div class="col text-center ms-3">
-                    <p class="text-white small bg-warning rounded w-75">In prestito</p>
-                </div>
-                <div class="col-3 text-center fw-bold">
-                    <p>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-pencil"></i></button>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-trash-can"></i></button>
-                    </p>
-                </div>
-            </div>
-            <div class="row  border border-secondary border-start-0  border-top-0 border-end-0 pt-2">
-                <div class="col-5 small me-5">
-                    <p>Harry Potter e la pietra filosofale</p>
-                </div>
-                <div class="col-2 text-left fw-bold">
-                    <p>-</p>
-                </div>
-                <div class="col text-center ms-3">
-                    <p class="text-white small bg-success rounded w-75">Disponibile</p>
-                </div>
-                <div class="col-3 text-center fw-bold">
-                    <p>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-pencil"></i></button>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-trash-can"></i></button>
-                    </p>
-                </div>
-            </div>
-            <div class="row bg-light border border-secondary border-start-0  border-top-0 border-end-0 pt-2">
-                <div class="col-5 small me-5">
-                    <p>Il codice da Vinci</p>
-                </div>
-                <div class="col-2 text-left fw-bold">
-                    <p>-</p>
-                </div>
-                <div class="col text-end">
-                    <p class="text-white small bg-danger rounded w-75">Non disponibile</p>
-                </div>
-                <div class="col-3 text-center fw-bold">
-                    <p>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-pencil"></i></button>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-trash-can"></i></button>
-                    </p>
-                </div>
-            </div>
-            <div class="row border border-secondary border-start-0  border-top-0 border-end-0 pt-2">
-                <div class="col-5 small me-5">
-                    <p>Shining</p>
-                </div>
-                <div class="col-2 text-left fw-bold">
-                    <p>-</p>
-                </div>
-                <div class="col text-center ms-3">
-                    <p class="text-white small bg-success rounded w-75">Disponibile</p>
-                </div>
-                <div class="col-3 text-center fw-bold">
-                    <p>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-pencil"></i></button>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-trash-can"></i></button>
-                    </p>
-                </div>
-            </div>
-            <div class="row bg-light border border-secondary border-start-0  border-top-0 border-end-0 pt-2">
-                <div class="col-5 small me-5">
-                    <p>La divina commedia</p>
-                </div>
-                <div class="col-2 text-left">
-                    <p class="small">21/09/2023</p>
-                </div>
-                <div class="col text-center ms-3">
-                    <p class="text-white small bg-warning rounded w-75">In prestito</p>
-                </div>
-                <div class="col-3 text-center fw-bold">
-                    <p>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-pencil"></i></button>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-trash-can"></i></button>
-                    </p>
-                </div>
-            </div>
-            <div class="row border border-secondary border-start-0  border-top-0 border-end-0 pt-2">
-                <div class="col-5 small me-5">
-                    <p>Il trono di spade</p>
-                </div>
-                <div class="col-2 text-left fw-bold">
-                    <p>-</p>
-                </div>
-                <div class="col text-center ms-3">
-                    <p class="text-white small bg-success rounded w-75">Disponibile</p>
-                </div>
-                <div class="col-3 text-center fw-bold">
-                    <p>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-pencil"></i></button>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-trash-can"></i></button>
-                    </p>
-                </div>
-            </div>
-            <div class="row bg-light border border-secondary border-start-0  border-top-0 border-end-0 pt-2">
-                <div class="col-5 small me-5">
-                    <p>Il mondo di Sofia</p>
-                </div>
-                <div class="col-2 text-left fw-bold">
-                    <p>-</p>
-                </div>
-                <div class="col text-center">
-                    <p class="text-white small bg-danger rounded w-75">Non disponibile</p>
-                </div>
-                <div class="col-3 text-center fw-bold">
-                    <p>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-pencil"></i></button>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-trash-can"></i></button>
-                    </p>
-                </div>
-            </div>
-            <div class="row border border-secondary border-start-0  border-top-0 border-end-0 pt-2">
-                <div class="col-5 small me-5">
-                    <p>Le cronache di Narnia: Il Leone, La strega e L'armadio</p>
-                </div>
-                <div class="col-2 text-left">
-                    <p class="small">25/07/2023</p>
-                </div>
-                <div class="col text-center ms-3">
-                    <p class="text-white small bg-warning rounded w-75">In prestito</p>
-                </div>
-                <div class="col-3 text-center fw-bold">
-                    <p>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-pencil"></i></button>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-trash-can"></i></button>
-                    </p>
-                </div>
-            </div>
-            <div class="row bg-light border border-secondary border-start-0  border-top-0 border-end-0 pt-2">
-                <div class="col-5 small me-5">
-                    <p>Il piccolo principe</p>
-                </div>
-                <div class="col-2 text-left fw-bold">
-                    <p>-</p>
-                </div>
-                <div class="col text-center ms-3">
-                    <p class="text-white small bg-success rounded w-75">Disponibile</p>
-                </div>
-                <div class="col-3 text-center fw-bold">
-                    <p>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-pencil"></i></button>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-trash-can"></i></button>
-                    </p>
-                </div>
-            </div>
-            <div class="row border border-secondary border-start-0  border-top-0 border-end-0 pt-2">
-                <div class="col-5 small me-5">
-                    <p>La storia infinita</p>
-                </div>
-                <div class="col-2 text-left fw-bold">
-                    <p>-</p>
-                </div>
-                <div class="col text-center ms-3">
-                    <p class="text-white small bg-success rounded w-75">Disponibile</p>
-                </div>
-                <div class="col-3 text-center fw-bold">
-                    <p>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-pencil"></i></button>
-                        <button class="rounded text-secondary"><i class="fa-solid fa-trash-can"></i></button>
-                    </p>
-                </div>
-            </div>
-
-            
-        </div>
+	<main>
+		<!-- <div class="container mt-3 px-4">
 
 
+		<div class="container mt-3 px-5">
+			<div class="row">
+				<div class="col-5 fw-bold">
+					<p>Titolo</p>
+				</div>
+				<div class="col text-center fw-bold">
+					<p>Data Prestito</p>
+				</div>
+				<div class="col text-center fw-bold">
+					<p>Stato</p>
+				</div>
+				<div class="col-3 text-center fw-bold">
+					<p>Azioni</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container mt-3 px-5">
+			<div class="row bg-light border border-secondary border-start-0 border-end-0 pt-2">
+				<div class="col-5 small me-5">
+					<p>I pilastri della terra</p>
+				</div>
+				<div class="col-2 text-left fw-bold">
+					<p>-</p>
+				</div>
+				<div class="col text-center ms-3">
+					<p class="text-white small bg-success rounded w-75">Disponibile</p>
+				</div>
+				<div class="col-3 text-center fw-bold">
+					<p>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-pencil"></i>
+						</button>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-trash-can"></i>
+						</button>
+					</p>
+				</div>
+			</div>
+			<div class="row border border-secondary border-start-0 border-top-0 border-end-0 pt-2">
+				<div class="col-5 small me-5">
+					<p>I promessi sposi</p>
+				</div>
+				<div class="col-2 text-left fw-bold">
+					<p>-</p>
+				</div>
+				<div class="col text-center ms-3">
+					<p class="text-white small bg-success rounded w-75">Disponibile</p>
+				</div>
+				<div class="col-3 text-center fw-bold">
+					<p>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-pencil"></i>
+						</button>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-trash-can"></i>
+						</button>
+					</p>
+				</div>
+			</div>
+			<div class="row bg-light border border-secondary border-start-0 border-top-0 border-end-0 pt-2">
+				<div class="col-5 small me-5">
+					<p>Il signore degli anelli</p>
+				</div>
+				<div class="col-2 text-left">
+					<p class="small">18/10/2023</p>
+				</div>
+				<div class="col text-center ms-3">
+					<p class="text-white small bg-warning rounded w-75">In prestito</p>
+				</div>
+				<div class="col-3 text-center fw-bold">
+					<p>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-pencil"></i>
+						</button>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-trash-can"></i>
+						</button>
+					</p>
+				</div>
+			</div>
+			<div class="row border border-secondary border-start-0 border-top-0 border-end-0 pt-2">
+				<div class="col-5 small me-5">
+					<p>Harry Potter e la pietra filosofale</p>
+				</div>
+				<div class="col-2 text-left fw-bold">
+					<p>-</p>
+				</div>
+				<div class="col text-center ms-3">
+					<p class="text-white small bg-success rounded w-75">Disponibile</p>
+				</div>
+				<div class="col-3 text-center fw-bold">
+					<p>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-pencil"></i>
+						</button>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-trash-can"></i>
+						</button>
+					</p>
+				</div>
+			</div>
+			<div class="row bg-light border border-secondary border-start-0 border-top-0 border-end-0 pt-2">
+				<div class="col-5 small me-5">
+					<p>Il codice da Vinci</p>
+				</div>
+				<div class="col-2 text-left fw-bold">
+					<p>-</p>
+				</div>
+				<div class="col text-end">
+					<p class="text-white small bg-danger rounded w-75">
+						Non disponibile
+					</p>
+				</div>
+				<div class="col-3 text-center fw-bold">
+					<p>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-pencil"></i>
+						</button>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-trash-can"></i>
+						</button>
+					</p>
+				</div>
+			</div>
+			<div class="row border border-secondary border-start-0 border-top-0 border-end-0 pt-2">
+				<div class="col-5 small me-5">
+					<p>Shining</p>
+				</div>
+				<div class="col-2 text-left fw-bold">
+					<p>-</p>
+				</div>
+				<div class="col text-center ms-3">
+					<p class="text-white small bg-success rounded w-75">Disponibile</p>
+				</div>
+				<div class="col-3 text-center fw-bold">
+					<p>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-pencil"></i>
+						</button>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-trash-can"></i>
+						</button>
+					</p>
+				</div>
+			</div>
+			<div class="row bg-light border border-secondary border-start-0 border-top-0 border-end-0 pt-2">
+				<div class="col-5 small me-5">
+					<p>La divina commedia</p>
+				</div>
+				<div class="col-2 text-left">
+					<p class="small">21/09/2023</p>
+				</div>
+				<div class="col text-center ms-3">
+					<p class="text-white small bg-warning rounded w-75">In prestito</p>
+				</div>
+				<div class="col-3 text-center fw-bold">
+					<p>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-pencil"></i>
+						</button>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-trash-can"></i>
+						</button>
+					</p>
+				</div>
+			</div>
+			<div class="row border border-secondary border-start-0 border-top-0 border-end-0 pt-2">
+				<div class="col-5 small me-5">
+					<p>Il trono di spade</p>
+				</div>
+				<div class="col-2 text-left fw-bold">
+					<p>-</p>
+				</div>
+				<div class="col text-center ms-3">
+					<p class="text-white small bg-success rounded w-75">Disponibile</p>
+				</div>
+				<div class="col-3 text-center fw-bold">
+					<p>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-pencil"></i>
+						</button>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-trash-can"></i>
+						</button>
+					</p>
+				</div>
+			</div>
+			<div class="row bg-light border border-secondary border-start-0 border-top-0 border-end-0 pt-2">
+				<div class="col-5 small me-5">
+					<p>Il mondo di Sofia</p>
+				</div>
+				<div class="col-2 text-left fw-bold">
+					<p>-</p>
+				</div>
+				<div class="col text-center">
+					<p class="text-white small bg-danger rounded w-75">
+						Non disponibile
+					</p>
+				</div>
+				<div class="col-3 text-center fw-bold">
+					<p>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-pencil"></i>
+						</button>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-trash-can"></i>
+						</button>
+					</p>
+				</div>
+			</div>
+			<div class="row border border-secondary border-start-0 border-top-0 border-end-0 pt-2">
+				<div class="col-5 small me-5">
+					<p>Le cronache di Narnia: Il Leone, La strega e L'armadio</p>
+				</div>
+				<div class="col-2 text-left">
+					<p class="small">25/07/2023</p>
+				</div>
+				<div class="col text-center ms-3">
+					<p class="text-white small bg-warning rounded w-75">In prestito</p>
+				</div>
+				<div class="col-3 text-center fw-bold">
+					<p>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-pencil"></i>
+						</button>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-trash-can"></i>
+						</button>
+					</p>
+				</div>
+			</div>
+			<div class="row bg-light border border-secondary border-start-0 border-top-0 border-end-0 pt-2">
+				<div class="col-5 small me-5">
+					<p>Il piccolo principe</p>
+				</div>
+				<div class="col-2 text-left fw-bold">
+					<p>-</p>
+				</div>
+				<div class="col text-center ms-3">
+					<p class="text-white small bg-success rounded w-75">Disponibile</p>
+				</div>
+				<div class="col-3 text-center fw-bold">
+					<p>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-pencil"></i>
+						</button>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-trash-can"></i>
+						</button>
+					</p>
+				</div>
+			</div>
+			<div class="row border border-secondary border-start-0 border-top-0 border-end-0 pt-2">
+				<div class="col-5 small me-5">
+					<p>La storia infinita</p>
+				</div>
+				<div class="col-2 text-left fw-bold">
+					<p>-</p>
+				</div>
+				<div class="col text-center ms-3">
+					<p class="text-white small bg-success rounded w-75">Disponibile</p>
+				</div>
+				<div class="col-3 text-center fw-bold">
+					<p>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-pencil"></i>
+						</button>
+						<button class="rounded text-secondary">
+							<i class="fa-solid fa-trash-can"></i>
+						</button>
+					</p>
+				</div>
+			</div>
+		</div> -->
+
+
+		<div class="container mt-3 px-4">
+		<div class="row">
+			<div class="col-10 col-sm-8 col-md-9">
+				<p class="fs-4 fw-semibold">Catalogo Libri</p>
+			</div>
+			<div class="col">
+				<button class="fs-6 bg-primary text-white rounded p-2">
+					Aggiungi libro
+				</button>
+			</div>
+		</div>
+		</div>
+		</div>
+		<div class="container mt-3 px-4">
+			<table class="table table-striped text-center">
+				<thead>
+					<tr>
+						<th scope="col" class=" col-5 text-start">Titolo</th>
+						<th scope="col" class="d-sm-none d-md-table-cell">Data Prestito</th>
+						<th scope="col" class="text-start">Stato</th>
+						<th scope="col" class="text-start">Azioni</th>
+					</tr>
+				</thead>
+				<tbody class=" container mt-5 px-4">
+					<tr>
+						<th scope="row" class="text-start fw-normal small">I pilastri della terra</th>
+						<td class="d-sm-none d-md-table-cell">-</td>
+						<td class="text-white text-center small">
+							<p class="bg-success w-50 rounded">Disponibile</p>
+						</td>
+						<td class="text-start">
+							<p>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-pencil"></i>
+								</button>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-trash-can"></i>
+								</button>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="text-start fw-normal small">I promessi sposi</th>
+						<td class="d-sm-none d-md-table-cell">-</td>
+						<td class="text-white text-center small">
+							<p class="bg-success w-50 rounded">Disponibile</p>
+						</td>
+						<td class="text-start">
+							<p>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-pencil"></i>
+								</button>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-trash-can"></i>
+								</button>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="text-start fw-normal small">Il signore degli anelli</th>
+						<td class="d-sm-none d-md-table-cell">18/10/2023</td>
+						<td class="text-white text-center small">
+							<p class="bg-warning w-50 rounded">In Prestito</p>
+						</td>
+						<td class="text-start">
+							<p>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-pencil"></i>
+								</button>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-trash-can"></i>
+								</button>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="text-start fw-normal small">Harry Potter e la pietra filosofale</th>
+						<td class="d-sm-none d-md-table-cell">-</td>
+						<td class="text-white text-center small">
+							<p class="bg-success w-50 rounded">Disponibile</p>
+						</td>
+						<td class="text-start">
+							<p>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-pencil"></i>
+								</button>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-trash-can"></i>
+								</button>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="text-start fw-normal small">Il codice da Vinci</th>
+						<td class="d-sm-none d-md-table-cell">-</td>
+						<td class="text-white text-center small">
+							<p class=" d-sm-none d-md-none d-lg-table-cell bg-danger w-75 rounded">Non disponibile</p>
+							<p class=" d-lg-none bg-danger w-75 rounded">Non disponibile</p>
+						</td>
+						<td class="text-start">
+							<p>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-pencil"></i>
+								</button>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-trash-can"></i>
+								</button>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="text-start fw-normal small">Shining</th>
+						<td class="d-sm-none d-md-table-cell">-</td>
+						<td class="text-white text-center small">
+							<p class="bg-success w-50 rounded"> Disponibile</p>
+						</td>
+						<td class="text-start">
+							<p>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-pencil"></i>
+								</button>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-trash-can"></i>
+								</button>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="text-start fw-normal small">La Divina Commedia</th>
+						<td class="d-sm-none d-md-table-cell">21/09/2023</td>
+						<td class="text-white text-center small">
+							<p class="bg-warning w-50 rounded">In Prestito</p>
+						</td>
+						<td class="text-start">
+							<p>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-pencil"></i>
+								</button>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-trash-can"></i>
+								</button>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="text-start fw-normal small">Il trono di Spade</th>
+						<td class="d-sm-none d-md-table-cell">-</td>
+						<td class="text-white text-center small">
+							<p class="bg-success w-50 rounded">Disponibile</p>
+						</td>
+						<td class="text-start">
+							<p>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-pencil"></i>
+								</button>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-trash-can"></i>
+								</button>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="text-start fw-normal small">Il mondo di Sofia</th>
+						<td class="d-sm-none d-md-table-cell"> -</td>
+						<td class="text-white text-center small">
+							<p class=" d-sm-none d-md-none d-lg-table-cell bg-danger w-75 rounded">Non disponibile</p>
+							<p class=" d-lg-none bg-danger w-75 rounded">Non disponibile</p>
+						</td>
+						<td class="text-start">
+							<p>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-pencil"></i>
+								</button>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-trash-can"></i>
+								</button>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="text-start fw-normal small">Le cronache di Narnia: Il Leone, La strega e
+							L'armadio.</th>
+						<td class="d-sm-none d-md-table-cell">25/07/2023</td>
+						<td class="text-white text-center small">
+							<p class="bg-warning w-50 rounded">In Prestito</p>
+						</td>
+						<td class="text-start">
+							<p>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-pencil"></i>
+								</button>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-trash-can"></i>
+								</button>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="text-start fw-normal small">Il piccolo principe</th>
+						<td class="d-sm-none d-md-table-cell">-</td>
+						<td class="text-white text-center small">
+							<p class="bg-success w-50 rounded">Disponibile</p>
+						</td>
+						<td class="text-start">
+							<p>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-pencil"></i>
+								</button>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-trash-can"></i>
+								</button>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="text-start fw-normal small">La storia infinita</th>
+						<td class="d-sm-none d-md-table-cell">-</td>
+						<td class="text-white text-center small">
+							<p class="bg-success w-50 rounded">Disponibile</p>
+						</td>
+						<td class="text-start">
+							<p>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-pencil"></i>
+								</button>
+								<button class="rounded text-secondary">
+									<i class="fa-solid fa-trash-can"></i>
+								</button>
+							</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 
 
 
@@ -292,6 +576,9 @@
 
 
 
-    </main>
+
+
+	</main>
 </body>
+
 </html>
