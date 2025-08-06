@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <title>Libreria</title>
+</head>
+
+<body>
+    <header>
+        <!-- Navbaar componente BS-->
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <nav class="navbar">
+                    <div class="container">
+                        <a class="navbar-brand" href="#">
+                            <img src="img/duck.png" alt="duck-png" width="50" height="50">
+                        </a>
+                    </div>
+                </nav>
+                <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link secondary-link" aria-current="page" href="#">Catalogo Libri</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link secondary-link" href="#">Anagrafica Utenti</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link secondary-link" href="#">Storico Prestiti</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active secondary-link" href="#">Aggiungi libro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link secondary-link" href="#">Help</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <div class="container mt-3 px-4">
+            <div class="row">
+                <div class="col-10 col-sm-8 col-md-9">
+                    <p class="fs-2 fw-semibold">Nuovo Libro</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-3 px-4">
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-6">
+                    <label for="validationCustom01" class="form-label fw-semibold">Nome Autore</label>
+                    <input type="text" class="form-control text-secondary" id="validationCustom01"
+                        placeholder="Inserisci nome dell'autore" required>
+                    <div class="valid-feedback">
+                        Autore Trovato!
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="validationCustom02" class="form-label fw-semibold">Cognome Autore</label>
+                    <input type="text" class="form-control text-secondary" id="validationCustom02"
+                        placeholder="Inserisci il Cognome dell'Autore" required>
+                    <div class="valid-feedback">
+                        Cognome Autore Trovato!
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label for="validationCustom02" class="form-label fw-semibold">Titolo</label>
+                    <input type="text" class="form-control" id="validationCustom02" placeholder="Titolo del libro"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="validationCustom04" class="form-label fw-semibold">Genere</label>
+                    <select class="form-select text-secondary" id="validationCustom04" required>
+                        <option selected disabled value="Sfoglia Genere">Sfoglia Generi</option>
+                        <option>Antologia</option>
+                        <option>Arte</option>
+                        <option>Autobiografia</option>
+                        <option>Avventura</option>
+                        <option>Classico</option>
+                        <option>Cucina</option>
+                        <option>Didattico</option>
+                        <option>Economia</option>
+                        <option>Erotico</option>
+                        <option>Fantascienza</option>
+                        <option>Filosofia</option>
+                        <option>Giallo</option>
+                        <option>Graphic Novel</option>
+                        <option>Horror</option>
+                        <option>Informatica</option>
+                        <option>Letteratura per bambini</option>
+                        <option>Letteratura per ragazzi</option>
+                        <option>Manuale</option>
+                        <option>Medicina</option>
+                        <option>Mitologia</option>
+                        <option>Musica</option>
+                        <option>Politica</option>
+                        <option>Poesia</option>
+                        <option>Psicologia</option>
+                        <option>Religione</option>
+                        <option>Scienze</option>
+                        <option>Sociologia</option>
+                        <option>Spiritualità</option>
+                        <option>Sport</option>
+                        <option>Storico</option>
+                        <option>Umorismo</option>
+                        <option>Viaggi</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Scegli un genere esistente.
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="validationCustom05" class="form-label fw-semibold">Anno di pubblicazione</label>
+                    <input type="text" class="form-control" id="validationCustom05" required>
+                    <div class="invalid-feedback">
+                        Inserisci una Data giusta
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="validationCustom05" class="form-label fw-semibold">ISBN#</label>
+                    <input type="text" class="form-control" id="validationCustom05" required>
+                    <div class="invalid-feedback">
+                        Inserisci una Data giusta
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                            Agree to terms and conditions
+                        </label>
+                        <div class="invalid-feedback">
+                            You must agree before submitting.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </form>
+
+        </div>
+
+    </main>
+
+
+
+
+
+</body>
