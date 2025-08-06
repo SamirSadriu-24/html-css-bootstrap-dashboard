@@ -22,7 +22,7 @@
             <div class="container-fluid">
                 <nav class="navbar">
                     <div class="container">
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="index.html">
                             <img src="img/duck.png" alt="duck-png" width="50" height="50">
                         </a>
                     </div>
@@ -140,29 +140,34 @@
                         Inserisci una Data giusta
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <label for="validationCustom05" class="form-label fw-semibold">ISBN#</label>
-                    <input type="text" class="form-control" id="validationCustom05" required>
+                    <input type="text" class="form-control" id="validationCustom05" required
+                        placeholder="Inserisci il codice ISBN#">
                     <div class="invalid-feedback">
                         Inserisci una Data giusta
                     </div>
                 </div>
-                <div class="col-12">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                        <label class="form-check-label" for="invalidCheck">
-                            Agree to terms and conditions
-                        </label>
-                        <div class="invalid-feedback">
-                            You must agree before submitting.
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <button class="btn btn-primary" type="submit">Submit form</button>
-                </div>
             </form>
+            <hr>
 
+            <div class="mb-3 mt-4">
+                <label for="exampleFormControlTextarea1" class="form-label fw-semibold">Note</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Inserisci eventuali note sul libro"  rows="5"></textarea>
+            </div>
+
+            <div class="col-12 mt-4">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label">
+                        Disponibile anche in digitale
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-12 mt-4">
+                <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
         </div>
 
     </main>
